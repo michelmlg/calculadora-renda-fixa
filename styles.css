@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h1 {
+    color: #333;
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin: 8px 0;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 480px;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #4caf50;
+    height: 3rem;
+    width: 10rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+
+  .btnCalcular{
+    position: relative;
+    right: -320px;
+  }
+  
+  #saidaDIV {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
