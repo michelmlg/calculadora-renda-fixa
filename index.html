@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<title>Calculadora</title>
 	<link href="styles.css" rel="stylesheet">
-	<script src="js/script.js" async></script>
+	<script src="javascript/script.js" type="module" async></script>
 </head>
 	
 <body>
@@ -13,13 +13,16 @@
 	<h1>Calculadora de Renda Fixa</h1>
 	
 	<label for="valorInicial">Valor da aplicação:</label>
-	<input type="text" name="valorInicial" id="valorInicial" autofocus>
+	<input type="number" name="valorInicial" id="valorInicial" autofocus>
+
 	<label for="investMes">Investimento mensal:</label>
-	<input type="text" name="investMes" id="investMes" autofocus>
+	<input type="number" name="investMes" id="investMes">
+
 	<label for="prazoMes">Prazo:</label>
-	<input type="text" name="prazoMes" id="prazoMes" autofocus>
+	<input type="number" name="prazoMes" id="prazoMes">
+
 	<label for="taxaMes">Taxa:</label>
-	<input type="text" name="taxaMes" id="taxaMes" autofocus>
+	<input type="number" name="taxaMes" id="taxaMes">
 	
 	<br>
 	
