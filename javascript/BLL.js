@@ -12,21 +12,16 @@ export default function validarDados(conta){
         Erro.setMSG = "O valor inicial não pode ser menor que zero!";
         return;
     }
-    if(conta.valorInicial == NaN){
+    if(isNaN(conta.valorInicial)){
         Erro.setMSG = "O valor inicial não pode ser nulo! Condição string";
         return;
     }
-    
-    /*if(!(typeof conta.valorInicial === "number")){
-        Erro.setMSG = "O valor inicial não pode ser nulo!";
-        return;
-    }
 
-    if(conta.porteMensal < 0){
+    if(conta.aporteMensal < 0){
         Erro.setMSG = "O investimento mensal não pode ser menor que zero!";
         return;
     }
-    if(!(conta.porteMensal === NaN)){
+    if(isNaN(conta.aporteMensal)){
         Erro.setMSG = "O investimento mensal não pode ser nulo!";
         return;
     }
@@ -34,7 +29,8 @@ export default function validarDados(conta){
     if(conta.prazo < 0){
         Erro.setMSG = "O prazo não pode ser menor que zero!";
         return;
-    }else if(!(conta.prazo === NaN)){
+    }
+    if(isNaN(conta.prazo)){
         Erro.setMSG = "O prazo não pode ser nulo!";
         return;
     }
@@ -42,10 +38,11 @@ export default function validarDados(conta){
     if(conta.taxa < 0){
         Erro.setMSG = "A taxa não pode ser menor que zero!";
         return;
-    }else if(!(conta.taxa === NaN)){
+    }
+    if(isNaN(conta.taxa)){
         Erro.setMSG = "O valor da taxa não pode ser nulo!";
         return;
-    }*/
+    }
 
     
 

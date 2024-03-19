@@ -6,6 +6,7 @@
 	<title>Calculadora</title>
 	<link href="styles.css" rel="stylesheet">
 	<script src="javascript/script.js" type="module" async></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 	
 <body>
@@ -28,10 +29,18 @@
 	
 	<button class="btnCalcular" id="btnCalcular" type="button">Calcular</button>
 
-	<div id="saidaDIV"></div>
+	<div id="saidaDIV">
+	<div id="retornoDIV"></div>
+	<canvas id="graficoSaida"></canvas>
+	</div>
+
 </content>
+
+<script src="js/jquery-latest.min.js"></script>
+<script src="js/jquery.mask.min.js"></script>
+<script src="js/jquery.mask.js"></script>
+
 </body>
-	
 </html>
 
 

@@ -1,3 +1,6 @@
+import {contaMes} from './script.js'
+import {contaValor} from './script.js'
+
 export class RendaFixa{
     
     constructor(valorInicial, aporteMensal, prazo, taxa){
@@ -17,6 +20,8 @@ export class RendaFixa{
        let resultado = valorInicial_;
         
         for(let i = 0; i < prazo_; i++){
+            contaMes[i] = i;
+            contaValor[i] = resultado;
             resultado = (resultado + aporteMensal_) * (1 + taxa_ / 100);
             console.log(resultado);
         }
