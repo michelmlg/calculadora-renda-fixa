@@ -13,17 +13,17 @@
 <content class="formulario">
 	<h1>Calculadora de Renda Fixa</h1>
 	
-	<label for="valorInicial">Valor da aplicação:</label>
-	<input type="number" name="valorInicial" id="valorInicial" autofocus>
+	<label for="valorInicial"><b>Valor da aplicação:</b></label>
+	<input type="text" name="valorInicial" class="money" id="valorInicial" placeholder="R$0,00" autofocus>
 
-	<label for="investMes">Investimento mensal:</label>
-	<input type="number" name="investMes" id="investMes">
+	<label for="investMes"><b>Investimento mensal:</b></label>
+	<input type="text" name="investMes" class="money" id="investMes" placeholder="R$0,00">
 
-	<label for="prazoMes">Prazo:</label>
-	<input type="number" name="prazoMes" id="prazoMes">
+	<label for="prazoMes"><b>Prazo</b> (meses):</label>
+	<input type="text" name="prazoMes" id="prazoMes" placeholder="0">
 
 	<label for="taxaMes">Taxa:</label>
-	<input type="number" name="taxaMes" id="taxaMes">
+	<input type="text" name="taxaMes" id="taxaMes" placeholder="0.00">
 	
 	<br>
 	
@@ -35,10 +35,11 @@
 	</div>
 
 </content>
-
-<script src="js/jquery-latest.min.js"></script>
-<script src="js/jquery.mask.min.js"></script>
-<script src="js/jquery.mask.js"></script>
+<script
+  src="https://code.jquery.com/jquery-1.7.2.min.js"
+  integrity="sha256-R7aNzoy2gFrVs+pNJ6+SokH04ppcEqJ0yFLkNGoFALQ="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
 
 </body>
 </html>

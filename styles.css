@@ -1,22 +1,24 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #f5f2ef;
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #21140F
 }
 
+
 h1 {
-  color: #333;
+  color: #21140F;
   text-align: center;
 }
 
 label {
+  color: #21140F;
   display: block;
   margin: 8px 0;
-  font-weight: bold;
 }
 
 input {
@@ -27,7 +29,7 @@ input {
 }
 
 button {
-  background-color: #4caf50;
+  background-color: rgb(141, 191, 65);
   height: 3rem;
   width: 10rem;
   color: white;
@@ -44,7 +46,17 @@ button:hover {
   position: relative;
   right: -320px;
 }
-
+.textoResultado{
+  font-size: 1.5rem;
+}
+.textoTotalInvestido{
+  color: rgb(229, 62, 80);
+}
+#valorResultado{
+  color: rgb(141, 191, 65);
+  font-size: 2rem;
+  font-weight: bolder;
+}
 #saidaDIV {
   margin-top: 20px;
   padding: 10px;

@@ -1,5 +1,6 @@
 import {contaMes} from './script.js'
 import {contaValor} from './script.js'
+import {valorSemTaxa} from './script.js'
 
 export class RendaFixa{
     
@@ -11,19 +12,29 @@ export class RendaFixa{
     }
     
     Calcular(){
-        
         const valorInicial_ = this.valorInicial;
         const aporteMensal_ = this.aporteMensal;
         const prazo_ = this.prazo;
         const taxa_ = this.taxa;
-
-       let resultado = valorInicial_;
+        let soma = valorInicial_;
+        let resultado = valorInicial_;
         
+        console.log(valorInicial_);
+        console.log(aporteMensal_);
+
         for(let i = 0; i < prazo_; i++){
-            contaMes[i] = i;
-            contaValor[i] = resultado;
-            resultado = (resultado + aporteMensal_) * (1 + taxa_ / 100);
+
+            //Calcula valor total do rendimento e o valor aplicado
+            resultado = (resultado * (1+ taxa_)) + aporteMensal_;
+            soma += aporteMensal_;
             console.log(resultado);
+            console.log(soma);
+            //Recebe valores tabela
+            contaMes[i] = i;
+            contaValor[i] = resultado.toFixed(2);
+            valorSemTaxa[i] = soma.toFixed(2);
+
+            
         }
         
         return resultado;
