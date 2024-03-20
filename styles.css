@@ -9,7 +9,6 @@ body {
   color: #21140F
 }
 
-
 h1 {
   color: #21140F;
   text-align: center;
@@ -39,9 +38,12 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: rgb(85, 119, 35);
 }
 
+.inline{
+  align-self: flex-start;
+}
 .btnCalcular{
   position: relative;
   right: -320px;
@@ -51,11 +53,21 @@ button:hover {
 }
 .textoTotalInvestido{
   color: rgb(229, 62, 80);
+  font-weight: bold;
 }
-#valorResultado{
+.Rmoney{
   color: rgb(141, 191, 65);
+  font-size: 2rem
+}
+.Tmoney{
+  color: rgb(229, 62, 80);
+}
+.valorResultado{
+  color: rgb(141, 191, 65);
+  margin-top: 0px;
   font-size: 2rem;
   font-weight: bolder;
+  padding: 8px;
 }
 #saidaDIV {
   margin-top: 20px;

@@ -19,22 +19,17 @@ export class RendaFixa{
         let soma = valorInicial_;
         let resultado = valorInicial_;
         
-        console.log(valorInicial_);
-        console.log(aporteMensal_);
 
         for(let i = 0; i < prazo_; i++){
 
             //Calcula valor total do rendimento e o valor aplicado
             resultado = (resultado * (1+ taxa_)) + aporteMensal_;
             soma += aporteMensal_;
-            console.log(resultado);
-            console.log(soma);
+            
             //Recebe valores tabela
             contaMes[i] = i;
             contaValor[i] = resultado.toFixed(2);
             valorSemTaxa[i] = soma.toFixed(2);
-
-            
         }
         
         return resultado;

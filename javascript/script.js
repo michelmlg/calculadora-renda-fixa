@@ -4,6 +4,8 @@ import { Erro } from './caseError.js';
 
 $(document).ready(function(){
     $('.money').mask("#.##0,00", {reverse: true});;
+    $('.Rmoney').mask("#.##0,00", {reverse: true});;
+    $('.Tmoney').mask("#.##0,00", {reverse: true});;
   });
 
 let retorno = document.getElementById("retornoDIV");
@@ -14,10 +16,10 @@ export let contaValor= [];
 export let valorSemTaxa= [];
 
 function ObterInicial(){
-    return document.getElementById("valorInicial").value.replace(/\./g, "");
+    return document.getElementById("valorInicial").value.replace(/\./g, "").replace(/\,/g, ".");
 }
 function ObterAporteMensal(){
-    return document.getElementById("investMes").value.replace(/\./g, "");
+    return document.getElementById("investMes").value.replace(/\./g, "").replace(/\,/g, ".");
 }
 function ObterPrazo(){
     return document.getElementById("prazoMes").value;
@@ -35,20 +37,13 @@ function index(){
 
     Erro.TemErro = false;
     validarDados(obj1);
-    
-    console.log(Erro.getMSG, ObterInicial(),typeof obj1.valorInicial, obj1.valorInicial);
 
     if(Erro.TemErro == true){
         alert(`${Erro.getMSG}`);
     }
     else
     {
-        /*
-        console.log(contaMes);
-        console.log(contaValor);
-        console.log(valorSemTaxa);
-        console.log(valorSemTaxa);
-        */
+
     const ctx = document.getElementById('graficoSaida');
 
         const data =
@@ -77,9 +72,9 @@ function index(){
     });
 
     retorno.innerHTML = `
-    <p class="textoResultado">Em <b>${obj1.prazo} meses</b> você teria: <br> <b id="valorResultado">${obj1.Calcular().toFixed(2)}</b></p>
+    <p class="textoResultado">Em <b>${obj1.prazo} meses</b> você teria: <div class="valorResultado">R$ <span class="Rmoney"> ${obj1.Calcular().toFixed(2)}</span></div></p>
 
-    <p>Total investido: R$<b class="money">${valorSemTaxa[valorSemTaxa.length - 1]}</b></p>
+    <p>Total investido: <span class="textoTotalInvestido ">R$ <span class="Tmoney">${valorSemTaxa[valorSemTaxa.length - 1]}</span></span></p>
     `;
     
 }
